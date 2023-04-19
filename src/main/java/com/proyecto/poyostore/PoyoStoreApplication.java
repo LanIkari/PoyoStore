@@ -15,6 +15,6 @@ public class PoyoStoreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PoyoStoreApplication.class, args);
-		System.out.println("Xd");
+		System.out.println("BrandonCUM69");
 	}
 }
