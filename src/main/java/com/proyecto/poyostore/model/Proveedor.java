@@ -5,10 +5,10 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("proveedor")
+@Document("Proveedor")
 @Setter
 @Getter
-public class proveedor {
+public class Proveedor {
     @Id
     private String id_proveedor;
     private String nombre;
@@ -16,7 +16,7 @@ public class proveedor {
     private String correo;
 
 
-    public proveedor(String nombre, String telefono, String correo) {
+    public Proveedor(String nombre, String telefono, String correo) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;

@@ -5,10 +5,10 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document ("Producto")
 @Setter
 @Getter
-public class producto {
+public class Producto {
     @Id
     private String id_producto;
     @Id
@@ -20,7 +20,12 @@ public class producto {
     private int cantidad;
     private byte imagen;
 
-    public producto(String nombre, String descripcion,  String categoria,  double precio, int cantidad, byte imagen) {
+    public Producto(Proveedor proveedor){
+        this.proveedor=proveedor;
+    }
+
+    public Producto(Proveedor proveedor, String nombre, String descripcion, String categoria, double precio, int cantidad, byte imagen) {
+        this.proveedor=proveedor;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;

@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document("factura")
+@Document("Factura")
 @Setter
 @Getter
 // Clase que representa a una factura
@@ -19,16 +19,20 @@ public class factura {
     @Id
     private String id_usuario;
     // Hacemos uso del identificador del producto para ligarlo a una factura
-    @Id
-
-    private String id_prducto;
+    private Producto producto;
     private Date fecha;
-
     private double total;
-
     private int numeroSeguimiento;
+
+    public Factura(Usuario usuario, Producto producto){
+        this.usuario=usuario;
+        this.producto=producto;
+    }
+
     //Creacion de constructor vacío para factura
-    public factura(Date fecha, double total, int numeroSeguimiento) {
+    public Factura(Usuario usuario, Producto producto, Date fecha, double total, int numeroSeguimiento) {
+        this.usuario=usuario;
+        this.producto=producto;
         this.fecha = fecha;
         this.total = total;
         this.numeroSeguimiento = numeroSeguimiento;
