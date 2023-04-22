@@ -20,6 +20,10 @@ public class Producto {
     private int cantidad;
     private byte imagen;
 
+    public Producto(){
+
+    }
+
     public Producto(Proveedor proveedor){
         this.proveedor=proveedor;
     }

@@ -15,6 +15,9 @@ public class Proveedor {
     private String telefono;
     private String correo;
 
+    public Proveedor(){
+
+    }
 
     public Proveedor(String nombre, String telefono, String correo) {
         this.nombre = nombre;

@@ -17,6 +17,9 @@ public class Rol {
     private String nombre;
     private String descripcion;
     //Creacion de constructor vacío para Rol
+    public Rol(){
+
+    }
     public Rol(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;

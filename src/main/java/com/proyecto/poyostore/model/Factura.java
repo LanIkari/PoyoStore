@@ -24,6 +24,9 @@ public class factura {
     private double total;
     private int numeroSeguimiento;
 
+    public Factura(){
+
+    }
     public Factura(Usuario usuario, Producto producto){
         this.usuario=usuario;
         this.producto=producto;

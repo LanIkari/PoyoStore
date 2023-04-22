@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 // Clase que representa a un usuario
 public class Usuario {
+
     // Anotación que indica que el atributo id es el identificador del usuario
     @Id
     private String id_usuario;
@@ -27,6 +28,11 @@ public class Usuario {
 
     public Usuario(Rol rol){
         this.rol=rol;
+    }
+
+    //Creacion de constructor vacío para usuario
+    public Usuario(){
+
     }
 
     //Creacion de constructor vacío para usuario
