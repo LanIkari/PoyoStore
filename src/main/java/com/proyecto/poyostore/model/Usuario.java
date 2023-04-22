@@ -16,9 +16,9 @@ public class Usuario {
     // Anotación que indica que el atributo id es el identificador del usuario
     @Id
     private String id_usuario;
+
     // Anotación que indica que el atributo id es el identificador del rol
-    @Id
-    private String id_rol;
+    private Rol rol;
     private String nombre;
     private String apellido;
     private String correo;

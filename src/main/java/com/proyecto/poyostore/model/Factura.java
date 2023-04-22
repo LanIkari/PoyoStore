@@ -11,13 +11,15 @@ import java.util.Date;
 @Setter
 @Getter
 // Clase que representa a una factura
-public class factura {
+public class Factura {
+    
     // Anotación que indica que el atributo id es el identificador de la factura
     @Id
     private String id_factura;
+    
     // Hacemos uso del identificador del usuario para ligarlo a una factura
-    @Id
-    private String id_usuario;
+    private Usuario usuario;
+    
     // Hacemos uso del identificador del producto para ligarlo a una factura
     private Producto producto;
     private Date fecha;

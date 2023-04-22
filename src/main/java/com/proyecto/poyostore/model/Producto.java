@@ -11,8 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Producto {
     @Id
     private String id_producto;
-    @Id
-    private String id_proveedor;
+
+    private Proveedor proveedor;
     private String nombre;
     private String descripcion;
     private String categoria;

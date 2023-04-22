@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 //DAO=SERVICIO
 @SpringBootApplication (exclude = {SecurityAutoConfiguration.class})
 public class PoyoStoreApplication{
-
 	public static void main(String[] args) {
 		SpringApplication.run(PoyoStoreApplication.class, args);
 	}
