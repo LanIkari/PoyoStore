@@ -4,13 +4,14 @@ import com.proyecto.poyostore.model.Usuario;
 import com.proyecto.poyostore.repository.mdbUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 // Clase intermedia entre el REST Controller y la base de datos donde implementamos
 // los metodos para las operaciones CRUD
 @Service
-public class UsuarioService  {
+public class UsuarioService {
 
     @Autowired
     private mdbUsuarioRepository usuarioRepo;
@@ -20,25 +21,24 @@ public class UsuarioService  {
     //ya que la API de mongo para la gestion de la base de datos es que, Al crear
     //el objeto comprueba si ya existe ese mismo objeto, y si existe lo que hace es
     //actualizarlo, si no existe lo crea.
-    public void save(Usuario usuario){
+    public void saveUsuario(Usuario usuario) {
         usuarioRepo.save(usuario);
     }
 
     //Metodo para obtener todos los usuarios
-    public List<Usuario> getAllUsers(){
+    public List<Usuario> getAllUsers() {
         return usuarioRepo.findAll();
     }
 
     //Metodo para obtener un usuario por su Id
     //Optional es una tipo de variable que permite comprobar si el objeto
     //que se esta retornando es nulo o no
-    public Optional<Usuario> findById(String id){
+    public Optional<Usuario> getUsuarioById(String id) {
         return usuarioRepo.findById(id);
     }
 
     //Metodo para eliminar un usuario por su Id
-    public void deleteById(String id){
+    public void deleteUsuarioById(String id) {
         usuarioRepo.deleteById(id);
     }
-
 }
