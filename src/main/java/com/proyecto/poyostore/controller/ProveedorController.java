@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("proveedores")
+@RequestMapping("/proveedores")
 public class ProveedorController {
     // Inyectamos la interfaz de usuario en una variable de tipo privada con @Autowired
     @Autowired
