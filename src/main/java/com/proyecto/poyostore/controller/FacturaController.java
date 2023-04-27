@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("facturas")
+@RequestMapping("/facturas")
 public class FacturaController {
     // Inyectamos la interfaz de usuario en una variable de tipo privada con @Autowired
     @Autowired
