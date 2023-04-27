@@ -1,0 +1,11 @@
+package com.proyecto.poyostore.repository;
+
+import com.proyecto.poyostore.model.Rol;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+/*Implementacion de la API de MongoDB con Spring. Esta clase actua como enlace entre nuestro modelado y la base de datos.
+De igual forma esta clase contiene todos los metodos para las operaciones CRUD*/
+@Repository
+public interface mdbRolRepository extends MongoRepository<Rol, String> {
+}
