@@ -1,7 +1,6 @@
 package com.proyecto.poyostore.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -12,11 +11,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 // Anotación que indica que la clase es un documento de MongoDB y que se guardará en la colección "usuario" de la base de datos "DBPoyoStore". Si la coleccion no existe se creara.
 @Document("Usuario")
-// Lombok genera los métodos getter y setter que nos ayudan a reciclar codigo
-@Getter
-@Setter
 // Clase que representa a un usuario
 public class Usuario implements UserDetails {
 
