@@ -1,9 +1,7 @@
 package com.proyecto.poyostore.service;
 
 import com.proyecto.poyostore.model.Producto;
-import com.proyecto.poyostore.model.Rol;
 import com.proyecto.poyostore.repository.mdbProductoRepository;
-import com.proyecto.poyostore.repository.mdbRolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
