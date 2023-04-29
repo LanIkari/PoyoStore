@@ -55,7 +55,6 @@ public class Usuario implements UserDetails {
     }
 
     //Metodos que retornan un valor true para que las cuentas de usuario no caduquen, no se bloqueen y las credenciales nunca expiren
-
     @Override
     public boolean isAccountNonExpired() {
         return true;
