@@ -49,14 +49,15 @@ public class JwtService {
     //Logica para generar un token JWT
     public String generarToken(Map<String, Object> extraClaims, UserDetails userDetails) {
         //Le otorgamos al token generado el atributo de "Rol".De esta forma en la decodificacion podremos ver atributo rol.
-        extraClaims.put("authorities", (Set<SimpleGrantedAuthority>) userDetails.getAuthorities());
+        extraClaims.put("authorities", userDetails.getAuthorities());
+
         //Retornamos el token generado con la libreria Jwts.
         return Jwts.builder().setClaims(extraClaims).setSubject(userDetails.getUsername()).setIssuedAt(new Date(System.currentTimeMillis())).setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24)).signWith(getLlaveFirma(), SignatureAlgorithm.HS256).compact();
     }
 
     //Validacion de token
     public boolean isTokenValid(String token, UserDetails userDetails) {
-        //Extraemos el correo del token
+        //Extraemos el correo del token"0c6ba35a"
         final String correo = extraerCorreo(token);
         //Retonramos True si el correo del token es igual al correo del usuario y si el token no ha expirado
         return (correo.equals(userDetails.getUsername())) && !isTokenExpired(token);
