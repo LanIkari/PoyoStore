@@ -7,11 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/demo-controller")
+@RequestMapping("/acceso")
 @RequiredArgsConstructor
 public class DemoController {
-    @GetMapping
-    public ResponseEntity<String> demo(){
-        return ResponseEntity.ok("Seguridad Integrada");
+
+    @GetMapping("/registroxd")
+    public String registro() {
+        return "registro";
+    }
+
+    @GetMapping("/autenticacion")
+    public String acceso() {
+        return "autenticacion";
     }
 }
