@@ -11,7 +11,17 @@ public class navegacionController {
     }
 
     @GetMapping("/seguridad")
-    public ResponseEntity<String> demo(){
-        return ResponseEntity.ok("Seguridad Integrada");
+    public String seguridad(){
+        return "InicioCorrecto";
+    }
+
+    @GetMapping("/acceso/registro")
+    public String registro() {
+        return "registro";
+    }
+
+    @GetMapping("/acceso/autenticacion")
+    public String acceso() {
+        return "autenticacion";
     }
 }
